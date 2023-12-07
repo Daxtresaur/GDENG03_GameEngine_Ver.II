@@ -1,7 +1,6 @@
 #pragma once
 #include "AUIPanel.h"
 #include "SceneWriter.h"
-//#include <imfilebrowser.h>
 #include "imgui/imfilebrowser.h"
 
 class SceneSavePanel : public AUIPanel

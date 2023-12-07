@@ -9,3 +9,8 @@ std::vector<std::string> StringUtilities::split(const std::string& long_string, 
 	}
 	return elements;
 }
+
+void StringUtilities::deleteCharacter(std::string* string, char char_to_remove)
+{
+	string->erase(std::remove(string->begin(), string->end(), char_to_remove), string->end());
+}

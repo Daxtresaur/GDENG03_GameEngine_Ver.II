@@ -167,6 +167,7 @@ void GameObjectManager::recreateObject(
 	Vector3D object_position,
 	Vector3D object_rotation,
 	Vector3D object_scale,
+	bool is_active,
 	bool has_physics_component,
 	bool is_physics_active,
 	bool is_static,
@@ -231,6 +232,13 @@ void GameObjectManager::deleteObject(AGameObject* game_object) {
 void GameObjectManager::deleteObjectByName(std::string name) {
 	AGameObject* object = findObjectByName(name);
 	if (object) deleteObject(object);
+}
+
+void GameObjectManager::deleteAllObjects()
+{
+	while (!mGameObjectList.empty()) {
+		deleteObject(mGameObjectList[0]);
+	}
 }
 
 void GameObjectManager::setSelectedObject(std::string name) {

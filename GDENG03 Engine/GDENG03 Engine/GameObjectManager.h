@@ -36,6 +36,7 @@ public:
 		Vector3D object_position,
 		Vector3D object_rotation,
 		Vector3D object_scale,
+		bool is_active,
 		bool has_physics_component,
 		bool is_physics_active,
 		bool is_static,
@@ -44,6 +45,7 @@ public:
 	);
 	void deleteObject(AGameObject* game_object);
 	void deleteObjectByName(std::string name);
+	void deleteAllObjects();
 
 	void setSelectedObject(std::string name);
 	void setSelectedObject(AGameObject* game_object);

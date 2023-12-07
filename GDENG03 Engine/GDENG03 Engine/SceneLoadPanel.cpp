@@ -4,7 +4,7 @@ SceneLoadPanel::SceneLoadPanel(std::string name) : AUIPanel::AUIPanel(name)
 {
 	browser = new ImGui::FileBrowser(ImGuiFileBrowserFlags_NoModal | ImGuiFileBrowserFlags_EnterNewFilename | ImGuiFileBrowserFlags_CreateNewDir);
 	browser->SetTitle("Save as");
-	browser->SetTypeFilters({ ".iet" });
+	browser->SetTypeFilters({ ".iet", ".unity" });
 }
 
 SceneLoadPanel::~SceneLoadPanel()
@@ -18,7 +18,13 @@ void SceneLoadPanel::draw()
 
 	if (browser->HasSelected())
 	{
-		SceneWriter::LoadFromFile(browser->GetSelected().string());
+		if (browser->GetSelected().string().find(".iet") != std::string::npos)
+			SceneWriter::LoadFromFile(browser->GetSelected().string());
+
+		else if (browser->GetSelected().string().find(".unity") != std::string::npos)
+			SceneWriter::LoadUnityFile(browser->GetSelected().string());
+
+
 		browser->Close();
 	}
 }

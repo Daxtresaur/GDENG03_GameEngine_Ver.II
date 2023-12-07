@@ -273,6 +273,7 @@
     <ClCompile Include="ObjectRenderer.cpp">
       <Filter>Engine\Graphics\ObjectRenderer</Filter>
     </ClCompile>
+    <ClCompile Include="UnityObject.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AppWindow.h">
@@ -788,6 +789,7 @@
     <ClInclude Include="ObjectRenderer.h">
       <Filter>Engine\Graphics\ObjectRenderer</Filter>
     </ClInclude>
+    <ClInclude Include="UnityObject.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
