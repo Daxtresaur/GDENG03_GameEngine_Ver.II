@@ -1,0 +1,11 @@
+Mayuga, David Rex C. 
+GDENG03 XX22
+FE - Game Engine
+
+Main Entry Class File: GDENG03 Engine/GDENG03 Engine/main.cpp
+
+How to Use:
+
+Camera Movement:
+Hold Right Mouse Button while pressing keys W,S,D,A
+
